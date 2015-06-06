@@ -1,0 +1,1 @@
+$(".col-actions-checkbox").each(function(index, checkbox) { checkbox.click();});
