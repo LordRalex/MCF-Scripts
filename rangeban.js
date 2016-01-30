@@ -8,5 +8,5 @@ function ban(mask, i, end) {
     $("#field-ipAddressToBan").val(mask + i);
     console.log('Banning ' + mask + i);
     $.post('/cp/ban-ip', $('form').serialize());
-    setTimeout(ban, 1000, mask, val + 1, end);
+    setTimeout(ban, 1000, mask, i + 1, end);
 }
