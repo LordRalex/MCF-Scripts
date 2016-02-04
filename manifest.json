@@ -1,0 +1,27 @@
+{
+    "manifest_version": 2,
+    "name": "MCF Extensions",
+    "description": "Add more moderation tools to the MinecraftForum.net site",
+    "version": "1.2",
+    "permissions": [
+        "activeTab"
+    ],
+    "content_scripts": [
+        {
+            "js": ["jquery.js", "deleteposts.js"],
+            "matches": [
+                "http://www.minecraftforum.net/members/*/posts*"
+            ]},
+        {
+            "js": ["jquery.js", "deletethreads.js"],
+            "matches": [
+                "http://www.minecraftforum.net/members/*/threads*"
+            ]
+        }, {
+            "js": ["jquery.js", "clearwhitelist.js"],
+            "matches": [
+                "http://www.minecraftforum.net/cp/users/*/edit*"
+            ]
+        }
+    ]
+}
