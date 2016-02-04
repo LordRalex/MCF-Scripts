@@ -1,1 +1,0 @@
-$(".j-user-ip-whitelisted:checked").each(function(index, checkbox) { checkbox.click();});
