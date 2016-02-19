@@ -22,6 +22,11 @@
             "matches": [
                 "http://www.minecraftforum.net/cp/users/*/edit*"
             ]
+        }, {
+            "js": ["jquery.js", "fixipsearch.js"],
+            "matches": [
+                "http://www.minecraftforum.net/*"
+            ]
         }
     ]
 }
