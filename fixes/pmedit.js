@@ -1,5 +1,3 @@
-
-console.log('pmedit loaded');
 $('ul.user-actions').each(function (index, element) {
     var comment = $(element).closest('div.j-comment');    
     var commentID = $(comment).attr('data-id');
@@ -11,8 +9,3 @@ $('ul.user-actions').each(function (index, element) {
         </a>\
         </li>');
 });
-
-
-//37345990
-
-        
