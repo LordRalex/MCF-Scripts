@@ -11,9 +11,10 @@
             "js": ["jquery.js", "deleteposts.js"],
             "matches": [
                 "http://www.minecraftforum.net/members/*/posts*"
-            ]},
+            ]
+        },
         {
-            "js": ["jquery.js", "deletethreads.js"],
+            "js": ["jquery.js", "fixes/deletethreads.js"],
             "matches": [
                 "http://www.minecraftforum.net/members/*/threads*"
             ]
@@ -23,9 +24,16 @@
                 "http://www.minecraftforum.net/cp/users/*/edit*"
             ]
         }, {
-            "js": ["jquery.js", "fixipsearch.js"],
+            "js": ["jquery.js", "fixes/ipsearch.js"],
             "matches": [
                 "http://www.minecraftforum.net/*"
+            ]
+        },
+        {
+            "js": ["jquery.js", "fixes/pmedit.js"],
+            "matches": [
+                "http://www.minecraftforum.net/private-messages/*"
+
             ]
         }
     ]
