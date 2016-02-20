@@ -2,10 +2,13 @@
     "manifest_version": 2,
     "name": "MCF Extensions",
     "description": "Add more moderation tools to the MinecraftForum.net site",
-    "version": "1.3",
+    "version": "1.4",
     "permissions": [
         "activeTab"
     ],
+    "icons": {
+        "64": "icon.png"
+    },
     "content_scripts": [
         {
             "js": ["jquery.js", "deleteposts.js"],

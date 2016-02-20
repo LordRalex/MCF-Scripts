@@ -1,4 +1,4 @@
-$('ul.user-actions').each(function (index, element) {
+$('ul.user-actions.user-actions-post').each(function (index, element) {
     var comment = $(element).closest('div.j-comment');    
     var commentID = $(comment).attr('data-id');
     $(element).prepend('<li class="user-action b-userAction-item user-action-edit tip responsive-bottom-nav-5" title="">\
