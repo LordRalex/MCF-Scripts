@@ -2,7 +2,7 @@
     "manifest_version": 2,
     "name": "MCF Extensions",
     "description": "Add more moderation tools to the MinecraftForum.net site",
-    "version": "1.6",
+    "version": "1.7",
     "permissions": [
         "activeTab"
     ],
@@ -15,8 +15,7 @@
             "matches": [
                 "http://www.minecraftforum.net/members/*/posts*"
             ]
-        },
-        {
+        }, {
             "js": ["jquery.js", "fixes/deletethreads.js"],
             "matches": [
                 "http://www.minecraftforum.net/members/*/threads*"
