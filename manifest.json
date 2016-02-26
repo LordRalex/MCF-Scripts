@@ -30,6 +30,11 @@
             "matches": [
                 "http://www.minecraftforum.net/forums/*"
             ]
+        }, {
+            "js": ["jquery.js", "appealpostcount.js"],
+            "matches": [
+                "http://www.minecraftforum.net/appeals/*"
+            ]
         }
     ]
 }
