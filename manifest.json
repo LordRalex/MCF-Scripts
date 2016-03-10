@@ -2,39 +2,44 @@
     "manifest_version": 2,
     "name": "MCF Extensions",
     "description": "Add more moderation tools to the MinecraftForum.net site",
-    "version": "1.7",
+    "version": "1.8",
     "permissions": [
-        "activeTab"
+        "activeTab",
+        "storage"
     ],
     "icons": {
         "64": "icon.png"
     },
     "content_scripts": [
         {
-            "js": ["jquery.js", "deleteposts.js"],
+            "js": ["jquery.js", "core.js", "deleteposts.js"],
             "matches": [
                 "http://www.minecraftforum.net/members/*/posts*"
             ]
         }, {
-            "js": ["jquery.js", "fixes/deletethreads.js"],
+            "js": ["jquery.js", "core.js", "fixes/deletethreads.js"],
             "matches": [
                 "http://www.minecraftforum.net/members/*/threads*"
             ]
         }, {
-            "js": ["jquery.js", "clearwhitelist.js"],
+            "js": ["jquery.js", "core.js", "clearwhitelist.js"],
             "matches": [
                 "http://www.minecraftforum.net/cp/users/*/edit*"
             ]
         }, {
-            "js": ["jquery.js", "fixes/unreadthread.js"],
+            "js": ["jquery.js", "core.js", "fixes/unreadthread.js"],
             "matches": [
                 "http://www.minecraftforum.net/forums/*"
             ]
         }, {
-            "js": ["jquery.js", "appealpostcount.js"],
+            "js": ["jquery.js", "core.js", "appealpostcount.js"],
             "matches": [
                 "http://www.minecraftforum.net/appeals/*"
             ]
         }
-    ]
+    ],
+    "options_ui": {
+        "page": "options/options.html",
+        "chrome_style": true
+    }
 }

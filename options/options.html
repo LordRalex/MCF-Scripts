@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MCF Extension Options</title>
+    </head>    
+
+    <body>       
+
+        <div>
+            <p>User visible options</p>
+            <p>
+                <input type="checkbox" id="enableAppealPostCount"/>
+                <span>Enable appeal comment counter</span>
+            </p>
+            <p>
+                <input type="checkbox" id="enableUnreadThreadFix"/>
+                <span>Enable unread thread fix</span>
+            </p>    
+        </div>
+
+        <div>
+            <p>Moderator visible options</p>
+            <p>
+                <input type="checkbox" id="enableWhitelistClear"/>
+                <span>Enable IP whitelist clear</span>
+            </p>
+            <p>
+                <input type="checkbox" id="enableThreadDelete"/>
+                <span>Enable profile thread deletion</span>
+            </p>  
+            <p>
+                <input type="checkbox" id="enableProfilePostDelete"/>
+                <span>Enable profile mass post deletion</span>
+            </p>  
+        </div>
+
+        <button id="save">Save</button>
+        <div id="status"></div>
+        <script src="options.js"></script>
+    </body>
+</html>
