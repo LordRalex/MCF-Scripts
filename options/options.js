@@ -6,12 +6,14 @@ function save_options() {
     var enableProfilePostDelete = document.getElementById('enableProfilePostDelete').checked;
     var enableUnreadThreadFix = document.getElementById('enableUnreadThreadFix').checked;
     var enableThreadDelete = document.getElementById('enableThreadDelete').checked;
+    var enableAppealPostMerge = document.getElementById('enableAppealPostMerge').checked;
     chrome.storage.sync.set({
         enableAppealPostCount: enableAppealPostCount,
         enableWhitelistClear: enableWhitelistClear,
         enableProfilePostDelete: enableProfilePostDelete,
         enableUnreadThreadFix: enableUnreadThreadFix,
-        enableThreadDelete: enableThreadDelete
+        enableThreadDelete: enableThreadDelete,
+        enableAppealPostMerge: enableAppealPostMerge
     }, function () {
         var status = document.getElementById('status');
         status.textContent = 'Options saved.';
@@ -27,13 +29,15 @@ function restore_options() {
         enableWhitelistClear: true,
         enableProfilePostDelete: true,
         enableUnreadThreadFix: true,
-        enableThreadDelete: true
+        enableThreadDelete: true,
+        enableAppealPostMerge: true
     }, function (items) {
         document.getElementById('enableAppealPostCount').checked = items.enableAppealPostCount;
         document.getElementById('enableWhitelistClear').checked = items.enableWhitelistClear;
         document.getElementById('enableProfilePostDelete').checked = items.enableProfilePostDelete;
         document.getElementById('enableUnreadThreadFix').checked = items.enableUnreadThreadFix;
         document.getElementById('enableThreadDelete').checked = items.enableThreadDelete;
+        document.getElementById('enableAppealPostMerge').checked = items.enableAppealPostMerge;
     });
 }
 

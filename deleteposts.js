@@ -1,4 +1,4 @@
-doIfEnabled('enableProfilePostDelete', function () {
+doIfEnabled('enableProfilePostDelete', true, function () {
     var postDiv = document.getElementsByClassName("listing-body")[0];
     var table = $('<table class="listing listing-forum-thread forum-thread-listing b-table b-table-a">' +
             '<thead class="b-table-header j-listing-table-header">' +

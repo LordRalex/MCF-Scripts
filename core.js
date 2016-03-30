@@ -1,5 +1,7 @@
-function doIfEnabled(flag, callback) {
-    chrome.storage.sync.get(flag, function (enabled) {
+function doIfEnabled(flag, def, callback) {
+    chrome.storage.sync.get({
+        [flag]: def
+    }, function (enabled) {
         if (enabled[flag]) {
             callback();
         }

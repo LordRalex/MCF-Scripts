@@ -1,4 +1,4 @@
-doIfEnabled('enableThreadDelete', function () {
+doIfEnabled('enableThreadDelete', true, function () {
     var dropdown = document.getElementById('field-action');
     var newSelect = document.createElement('option');
     newSelect.textContent = "Delete";
