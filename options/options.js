@@ -7,13 +7,19 @@ function save_options() {
     var enableUnreadThreadFix = document.getElementById('enableUnreadThreadFix').checked;
     var enableThreadDelete = document.getElementById('enableThreadDelete').checked;
     var enableAppealPostMerge = document.getElementById('enableAppealPostMerge').checked;
+    var disableQuickModTools = document.getElementById('disableQuickModTools').checked;
+    var disableProfilePostRep = document.getElementById('disableProfilePostRep').checked;
+    var enableProfilePostStatus = document.getElementById('enableProfilePostStatus').checked;
     chrome.storage.sync.set({
         enableAppealPostCount: enableAppealPostCount,
         enableWhitelistClear: enableWhitelistClear,
         enableProfilePostDelete: enableProfilePostDelete,
         enableUnreadThreadFix: enableUnreadThreadFix,
         enableThreadDelete: enableThreadDelete,
-        enableAppealPostMerge: enableAppealPostMerge
+        enableAppealPostMerge: enableAppealPostMerge,
+        disableQuickModTools: disableQuickModTools,
+        disableProfilePostRep: disableProfilePostRep,
+        enableProfilePostStatus: enableProfilePostStatus
     }, function () {
         var status = document.getElementById('status');
         status.textContent = 'Options saved.';
@@ -30,14 +36,16 @@ function restore_options() {
         enableProfilePostDelete: true,
         enableUnreadThreadFix: true,
         enableThreadDelete: true,
-        enableAppealPostMerge: true
+        enableAppealPostMerge: true,
+        disableQuickModTools: true,
+        disableProfilePostRep: true,
+        enableProfilePostStatus: true
     }, function (items) {
-        document.getElementById('enableAppealPostCount').checked = items.enableAppealPostCount;
-        document.getElementById('enableWhitelistClear').checked = items.enableWhitelistClear;
-        document.getElementById('enableProfilePostDelete').checked = items.enableProfilePostDelete;
-        document.getElementById('enableUnreadThreadFix').checked = items.enableUnreadThreadFix;
-        document.getElementById('enableThreadDelete').checked = items.enableThreadDelete;
-        document.getElementById('enableAppealPostMerge').checked = items.enableAppealPostMerge;
+        for(var key in items) {
+            if(items.hasOwnProperty(key)) {
+                document.getElementById(key).checked = items[key];
+            }
+        }
     });
 }
 
